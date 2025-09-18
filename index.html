@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vistago Registration & Scanner</title>
+  <link rel="icon" type="image/png" href="vistago.jpg">
+  <link rel="shortcut icon" type="image/png" href="vistago.jpg">
+  <link rel="stylesheet" href="trial.css" />
+</head>
+<body>
+  <!-- Page 1: Registration -->
+  <section id="loginPage" class="page visible">
+    <h1>Vistago Registration Portal</h1>
+    <h2>Majestic Railways Administration</h2>
+    <form id="loginForm">
+      <label>
+        Registration ID
+        <input type="text" id="regId" required />
+      </label>
+      <label>
+        Password
+        <input type="password" id="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Page 2: Scanner -->
+  <section id="scannerPage" class="page hidden">
+    <h1>QR Code Scanner</h1>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" hidden></canvas>
+
+    <div class="controls">
+      <button id="startBtn">Start Camera</button>
+      <button id="stopBtn" disabled>Stop Camera</button>
+      <button id="restartBtn" disabled>Restart Camera</button>
+    </div>
+
+    <div id="result">Scan a QR code...</div>
+  </section>
+
+  <!-- jsQR library -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+  <script src="trial.js"></script>
+</body>
+</html>
